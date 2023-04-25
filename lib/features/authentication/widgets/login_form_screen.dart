@@ -30,6 +30,7 @@ class _LoginFormScreenState extends State<LoginFormScreen> {
             Gaps.v28,
             const FormButton(
               disabled: false,
+              text: 'Log in',
             ),
           ],
         )),
