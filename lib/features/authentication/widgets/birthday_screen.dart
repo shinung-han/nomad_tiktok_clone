@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:tiktok_clone/constants/gaps.dart';
 import 'package:tiktok_clone/constants/sizes.dart';
-import 'package:tiktok_clone/features/authentication/widgets/email_screen.dart';
 import 'package:tiktok_clone/features/authentication/widgets/form_button.dart';
+import 'package:tiktok_clone/features/onboarding/interests_screen.dart';
 
 class BirthdayScreen extends StatefulWidget {
   const BirthdayScreen({super.key});
@@ -31,7 +31,7 @@ class _UsernameScreenState extends State<BirthdayScreen> {
   void _onNextTap() {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (_) => const EmailScreen(),
+        builder: (_) => const InterestsScreen(),
       ),
     );
   }
@@ -105,7 +105,10 @@ class _UsernameScreenState extends State<BirthdayScreen> {
           height: 300,
           child: CupertinoDatePicker(
             minimumDate: DateTime(
-                initialDate.year - 12, initialDate.month, initialDate.day),
+              initialDate.year - 12,
+              initialDate.month,
+              initialDate.day,
+            ),
             maximumDate: initialDate,
             initialDateTime: initialDate,
             mode: CupertinoDatePickerMode.date,
