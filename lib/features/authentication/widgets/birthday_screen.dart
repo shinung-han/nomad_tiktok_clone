@@ -104,6 +104,8 @@ class _UsernameScreenState extends State<BirthdayScreen> {
         child: SizedBox(
           height: 300,
           child: CupertinoDatePicker(
+            minimumDate: DateTime(
+                initialDate.year - 12, initialDate.month, initialDate.day),
             maximumDate: initialDate,
             initialDateTime: initialDate,
             mode: CupertinoDatePickerMode.date,
